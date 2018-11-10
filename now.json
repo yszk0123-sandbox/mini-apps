@@ -1,6 +1,7 @@
 {
-  "type": "docker",
-  "features": {
-    "cloud": "v2"
-  }
+  "version": 2,
+  "name": "mini-apps",
+  "builds": [
+    { "src": "package.json", "use": "@now/next" }
+  ]
 }
