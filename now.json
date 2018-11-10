@@ -1,6 +1,12 @@
 {
   "version": 2,
   "name": "mini-apps",
-  "builds": [{ "src": "packages/next/package.json", "use": "@now/next" }],
-  "routes": [{ "src": "/(.*)", "dest": "/packages/next/$1" }]
+  "builds": [
+    { "src": "packages/html/*.html", "use": "@now/static" },
+    { "src": "packages/next/package.json", "use": "@now/next" }
+  ],
+  "routes": [
+    { "src": "/html/(.*)", "dest": "/packages/html/$1.html" },
+    { "src": "/(.*)", "dest": "/packages/next/$1" }
+  ]
 }
