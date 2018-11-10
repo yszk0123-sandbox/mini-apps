@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
 import { format } from "date-fns";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { GlobalStyle } from "../components/GlobalStyle";
 import {
-  fontSizeLarge,
   bgColorDefault,
-  fgColorDefault
+  fgColorDefault,
+  fontSizeLarge
 } from "../lib/constants/StyleConstants";
 
 const Screen = styled.div`
@@ -31,7 +31,7 @@ const Box = styled.div`
 
 const INTERVAL = 1000;
 
-const useCurrentDate = () => {
+const useCurrentDate: () => Date = () => {
   const [date, setDate] = useState(new Date());
 
   useEffect(() => {
@@ -49,7 +49,9 @@ const useCurrentDate = () => {
   return date;
 };
 
-const Time = () => {
+interface Props {}
+
+const Time: React.SFC<Props> = () => {
   const date = useCurrentDate();
 
   return (
