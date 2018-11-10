@@ -1,21 +1,13 @@
 import { format } from "date-fns";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { GlobalStyle } from "../components/GlobalStyle";
+import { Layout } from "../components/Layout";
+import { Screen } from "../components/Screen";
 import {
   bgColorDefault,
   fgColorDefault,
   fontSizeLarge
 } from "../lib/constants/StyleConstants";
-
-const Screen = styled.div`
-  align-items: center;
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  padding: 0;
-  width: 100vw;
-`;
 
 const Box = styled.div`
   align-items: center;
@@ -55,10 +47,11 @@ const Time: React.SFC<Props> = () => {
   const date = useCurrentDate();
 
   return (
-    <Screen>
-      <Box>{format(date, "YYYY/MM/DD hh:mm:ss")}</Box>
-      <GlobalStyle />
-    </Screen>
+    <Layout>
+      <Screen>
+        <Box>{format(date, "YYYY/MM/DD hh:mm:ss")}</Box>
+      </Screen>
+    </Layout>
   );
 };
 
