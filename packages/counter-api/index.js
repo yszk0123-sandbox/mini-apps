@@ -56,7 +56,7 @@ function createError(error) {
   };
 }
 
-async function main(req, res) {
+async function handler(req, res) {
   const { query } = parse(req.url, true);
   const { accessToken } = query;
   if (!validateAccessToken(accessToken)) {
@@ -69,4 +69,4 @@ async function main(req, res) {
   send(res, 200, createOk(result));
 }
 
-module.exports = main;
+module.exports = handler;
