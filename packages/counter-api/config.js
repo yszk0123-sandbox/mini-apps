@@ -6,12 +6,14 @@ function decode(input) {
 }
 
 exports.config = {
-  gcp: {
-    projectId: process.env.APP_PROJECT_ID,
+  google: {
+    projectId: process.env.GOOGLE_PROJECT_ID,
     credentials: {
-      privateKey: decode(process.env.APP_PRIVATE_KEY),
-      clientEmail: process.env.APP_CLIENT_EMAIL
+      privateKey: decode(process.env.GOOGLE_PRIVATE_KEY),
+      clientEmail: process.env.GOOGLE_CLIENT_EMAIL
     }
   },
-  accessToken: process.env.APP_ACCESS_TOKEN
+  app: {
+    accessToken: process.env.APP_ACCESS_TOKEN
+  }
 };

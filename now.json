@@ -3,9 +3,9 @@
   "name": "mini-apps",
   "alias": ["mini-apps.yszk0123.site"],
   "env": {
-    "APP_PROJECT_ID": "mini-apps-222208",
-    "APP_CLIENT_EMAIL": "@app-client-email",
-    "APP_PRIVATE_KEY": "@app-private-key",
+    "GOOGLE_PROJECT_ID": "mini-apps-222208",
+    "GOOGLE_CLIENT_EMAIL": "@google-client-email",
+    "GOOGLE_PRIVATE_KEY": "@google-private-key",
     "APP_ACCESS_TOKEN": "@app-access-token"
   },
   "builds": [

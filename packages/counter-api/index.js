@@ -7,10 +7,10 @@ const DEFAULT_USER_ID = "default";
 
 function connect() {
   const firestore = new Firestore({
-    projectId: config.gcp.projectId,
+    projectId: config.google.projectId,
     credentials: {
-      private_key: config.gcp.credentials.privateKey,
-      client_email: config.gcp.credentials.clientEmail
+      private_key: config.google.credentials.privateKey,
+      client_email: config.google.credentials.clientEmail
     },
     timestampsInSnapshots: true
   });
@@ -41,7 +41,7 @@ async function incrementById(userId) {
 }
 
 function validateAccessToken(token) {
-  return token === config.accessToken;
+  return token === config.app.accessToken;
 }
 
 function createOk(data) {
