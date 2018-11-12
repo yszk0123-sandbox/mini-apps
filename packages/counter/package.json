@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "mini-apps-counter-api",
+  "name": "mini-apps-counter",
   "version": "0.1.0",
   "main": "index.js",
   "license": "MIT",

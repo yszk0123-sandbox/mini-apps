@@ -3,6 +3,7 @@
   "name": "mini-apps",
   "alias": ["mini-apps.yszk0123.site"],
   "env": {
+    "NODE_ENV": "production",
     "GOOGLE_PROJECT_ID": "mini-apps-222208",
     "GOOGLE_CLIENT_EMAIL": "@google-client-email",
     "GOOGLE_PRIVATE_KEY": "@google-private-key",
@@ -11,11 +12,11 @@
   "builds": [
     { "src": "packages/html/*.html", "use": "@now/static" },
     { "src": "packages/next/package.json", "use": "@now/next" },
-    { "src": "packages/counter-api/index.js", "use": "@now/node" }
+    { "src": "packages/counter/index.js", "use": "@now/node" }
   ],
   "routes": [
     { "src": "/html/(.*)", "dest": "/packages/html/$1.html" },
-    { "src": "/counter", "dest": "/packages/counter-api/index.js" },
+    { "src": "/counter", "dest": "/packages/counter/index.js" },
     { "src": "/(.*)", "dest": "/packages/next/$1" }
   ]
 }
